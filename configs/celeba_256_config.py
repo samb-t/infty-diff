@@ -1,9 +1,5 @@
 from ml_collections import ConfigDict
 from ml_collections.config_dict import FieldReference
-import pwd
-import os
-
-USERNAME = pwd.getpwuid(os.getuid())[0]
 
 def get_config():
     config = ConfigDict()
@@ -17,7 +13,7 @@ def get_config():
     config.data = data = ConfigDict()
     data.name = 'celeba'
     data.img_size = FieldReference(256)
-    data.root_dir = f'../../../2022/02/liif/load/celebAHQ/'
+    data.root_dir = ''
     data.channels = 3
     data.fid_samples = 50000
     
@@ -43,7 +39,7 @@ def get_config():
     model.uno_res = 128
     model.uno_base_channels = 128
     model.uno_mults = (1,2,4,8,8)
-    model.uno_blocks_per_level = (2,2,2,2,2) #(2,2,4,6,4)
+    model.uno_blocks_per_level = (2,2,2,2,2)
     model.uno_attn_resolutions = [16,8]
     model.uno_dropout_from_resolution = 16
     model.uno_dropout = 0.1

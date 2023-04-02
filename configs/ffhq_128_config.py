@@ -1,9 +1,5 @@
 from ml_collections import ConfigDict
 from ml_collections.config_dict import FieldReference
-import pwd
-import os
-
-USERNAME = pwd.getpwuid(os.getuid())[0]
 
 def get_config():
     config = ConfigDict()
@@ -13,15 +9,13 @@ def get_config():
     run.experiment = 'ffhq_mollified_128'
     run.wandb_dir = ''
     run.wandb_mode = 'online'
-    run.enable_visdom = False
-    run.visdom_server = 'http://localhost' if USERNAME == 'sam' else 'http://ncc1.clients.dur.ac.uk'
-    run.visdom_port = 8097 if USERNAME == 'sam' else 9275
 
     config.data = data = ConfigDict()
     data.name = 'ffhq'
-    data.root_dir = '/home/sam/workspace/data/FFHQ-256'
+    data.root_dir = ''
     data.img_size = FieldReference(128)
     data.channels = 3
+    data.fid_samples = 50000
     
     config.train = train = ConfigDict()
     train.load_checkpoint = False
