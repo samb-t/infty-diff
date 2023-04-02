@@ -1,0 +1,37 @@
+name: infty-diff                                                                        
+channels:
+  - defaults
+  - pytorch
+  - nvidia
+  - fvcore
+  - iopath
+  - conda-forge
+  - anaconda
+  - pytorch3d
+dependencies:
+  - python==3.10
+  - pip
+  - pytorch=1.13.1=py3.10_cuda11.7_cudnn8.5.0_0
+  - pytorch-cuda=11.7
+  - torchvision==0.14.1
+  - iopath
+  - fvcore
+  - pytorch3d
+  - einops
+  - scipy
+  - wandb
+  - lmdb
+  - absl-py
+  - ninja
+  - packaging
+  - imageio
+  - python-dateutil
+  - openblas-devel
+  - sparsehash
+  - pip:
+    - ml_collections
+    - torch-dct
+    - torchgeometry
+    - clean-fid
+    - "git+https://github.com/HazyResearch/flash-attention.git"
+    - "git+https://github.com/samb-t/torchsparse.git"
