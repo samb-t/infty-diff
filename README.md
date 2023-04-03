@@ -83,7 +83,7 @@ Huge thank you to everyone who makes their code available. In particular, some c
 
 ## BibTeX
 ```
-@article{bond2021unleashing,
+@article{bond2023infty,
   title       = {$\infty$-Diff: Infinite Resolution Diffusion with Subsampled Mollified States},
   author      = {Sam Bond-Taylor and Chris G. Willcocks},
   journal     = {arXiv preprint arXiv:2303.18242},
