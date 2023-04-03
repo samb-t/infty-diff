@@ -8,7 +8,7 @@
 
 ![front_page_diagram](assets/diagram.png)
 
-[arXiv](https://arxiv.org) | [BibTeX](#bibtex)
+[arXiv](https://arxiv.org/abs/2303.18242) | [BibTeX](#bibtex)
 
 ### Table of Contents
 
@@ -86,7 +86,7 @@ Huge thank you to everyone who makes their code available. In particular, some c
 @article{bond2021unleashing,
   title       = {$\infty$-Diff: Infinite Resolution Diffusion with Subsampled Mollified States},
   author      = {Sam Bond-Taylor and Chris G. Willcocks},
-  journal     = {arXiv Preprint Coming Soon},
+  journal     = {arXiv preprint arXiv:2303.18242},
   year        = {2023}
 }
 ```
