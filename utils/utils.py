@@ -155,8 +155,8 @@ def plot_images(H, x, title='', norm=True, vis=None):
     x = torch.clamp(x, 0, 1)
 
     # visdom
-    if H.run.enable_visdom and vis is not None:
-        vis.images(x, win=title, opts=dict(title=title))
+    # if H.run.enable_visdom and vis is not None:
+    #     vis.images(x, win=title, opts=dict(title=title))
     
     # wandb
     x = wandb.Image(x, caption=title)
