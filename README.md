@@ -1,10 +1,12 @@
 ## $\infty$-Diff: Infinite Resolution Diffusion with Subsampled Mollified States
 [Sam Bond-Taylor](https://samb-t.github.io/) and [Chris G. Willcocks](https://cwkx.github.io/)
 
+Published at the International Conference on Learning Representations (ICLR) 2024
+
 ![front_page_sample](assets/samples.jpg)
 
 ### Abstract
->   *We introduce ∞-Diff, a generative diffusion model which directly operates on infinite resolution data. By randomly sampling subsets of coordinates during training and learning to denoise the content at those coordinates, a continuous function is learned that allows sampling at arbitrary resolutions. In contrast to other recent infinite resolution generative models, our approach operates directly on the raw data, not requiring latent vector compression for context, using hypernetworks, nor relying on discrete components. As such, our approach achieves significantly higher sample quality, as evidenced by lower FID scores, as well as being able to effectively scale to much higher resolutions.*
+> *This paper introduces ∞-Diff, a generative diffusion model defined in an infinite-dimensional Hilbert space, which can model infinite resolution data. By training on randomly sampled subsets of coordinates and denoising content only at those locations, we learn a continuous function for arbitrary resolution sampling. Unlike prior neural field-based infinite-dimensional models, which use point-wise functions requiring latent compression, our method employs non-local integral operators to map between Hilbert spaces, allowing spatial context aggregation. This is achieved with an efficient multi-scale function-space architecture that operates directly on raw sparse coordinates, coupled with a mollified diffusion process that smooths out irregularities. Through experiments on high-resolution datasets, we found that even at an 8× subsampling rate, our model retains high-quality diffusion. This leads to significant run-time and memory savings, delivers samples with lower FID scores, and scales beyond the training resolution while retaining detail.*
 
 ![front_page_diagram](assets/diagram.png)
 
@@ -83,10 +85,10 @@ Huge thank you to everyone who makes their code available. In particular, some c
 
 ## BibTeX
 ```
-@article{bond2023infty,
-  title       = {$\infty$-Diff: Infinite Resolution Diffusion with Subsampled Mollified States},
-  author      = {Sam Bond-Taylor and Chris G. Willcocks},
-  journal     = {arXiv preprint arXiv:2303.18242},
-  year        = {2023}
+@inproceedings{bond2024infty,
+  title     = {$\infty$-Diff: Infinite Resolution Diffusion with Subsampled Mollified States},
+  author    = {Sam Bond-Taylor and Chris G. Willcocks},
+  booktitle = {Interrnational Conference on Learning Representations},
+  year      = {2024}
 }
 ```
